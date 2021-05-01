@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WilliamNinahualpa_examen.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" >
+            <StackLayout>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition  Width="auto" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Grid.Column="0" Text="Usuario conectado:" FontSize="20" ></Label>
+                    <Label Grid.Row="0" Grid.Column="1" x:Name="lblUser" FontSize="20" TextColor="White"></Label>
+                    <Label  Grid.Row="1" Grid.Column="0"  Text="REGISTRAR" HorizontalTextAlignment="Center" TextColor="White" FontSize="40" Grid.ColumnSpan="2"/>
+                </Grid>
+            </StackLayout>
+        </Frame>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition  Width="auto" />
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" 
+               Text="Nombre"                              
+               
+             />
+
+            <Entry Grid.Row="0" Grid.Column="1" x:Name="txtnombre" Placeholder="Ingrese nombre"></Entry>
+
+
+            <Label Grid.Row="1" Grid.Column="0"
+               Text="Monto Inicial"                              
+               
+             />
+
+            <Entry Grid.Row="1" Grid.Column="1" x:Name="txtmonto" Placeholder="Ingrese monto inicial" Keyboard="Numeric"></Entry>
+
+            <Label Grid.Row="2" Grid.Column="0" Text="Pago mensual"                              
+               
+             />
+
+            <Entry Grid.Row="2" Grid.Column="1" x:Name="txtpagomensual" IsReadOnly="True"></Entry>
+
+            <Button Grid.Row="3" Grid.Column="0"  x:Name="Calcular"
+                    Text="Calcular"
+                    Clicked="Calcular_Clicked"></Button>
+
+            <Button Grid.Row="3" Grid.Column="1"  x:Name="Guardar"
+                    Text="Guardar"
+                    Clicked="Guardar_Clicked"></Button>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
